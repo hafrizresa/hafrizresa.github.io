@@ -452,13 +452,10 @@
 
             // INI BUAT WELCOME NAME
             if (d.getHours() > 18) {
-                $('#output-login').html('Good Night ' + isianinput)
-            }
-            else if (d.getHours() > 6 && d.getHours() < 10) {
-                $('#output-login').html('Good Morning ' + isianinput)
-            }
-            else if (d.getHours() >= 10 && d.getHours() <= 2) {
                 $('#output-login').html('Good Evening ' + isianinput)
+            }
+            else if (d.getHours() > 6 && d.getHours() < 12) {
+                $('#output-login').html('Good Morning ' + isianinput)
             }
             else { $('#output-login').html('Good Afternoon ' + isianinput) }
         }

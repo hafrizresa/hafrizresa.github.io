@@ -73,6 +73,20 @@
 
 
     <script>
+        $('#Guest').on('keydown',function(e){
+            if(e.keyCode == 13){
+                e.preventDefault()
+                var nama = $(this).val()
+                if (nama !== '') {
+                $('.player').append(' ' + nama.toUpperCase())
+                $('#login-box').addClass('hide')
+                $('.game').removeClass('hide')
+            }
+            else {
+                alert('you must fill name')
+            }
+            }
+        })
         function ambilNama() {
             var nama = $('#Guest').val()
             if (nama !== '') {

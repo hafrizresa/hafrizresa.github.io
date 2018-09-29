@@ -17,7 +17,9 @@
 }
 /* END OF FONTS */
 
-
+.pilihanPlayer{
+  cursor: pointer
+}
 .result{
   font-family: 'Bangers';
   font-size: 80px

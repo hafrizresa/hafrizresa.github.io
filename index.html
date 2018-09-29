@@ -29,17 +29,7 @@
             <div class="akhir hide" style="text-align: center">
                 <h1 class="result"></h1>
             </div>
-            <h2 style="text-align: center; font-size: 20px"> YOUR OPPONENT </h2>
-            <div class="row">
-                <div class="col-md-offset-4 col-md-4">
-                    <div class="thumbnail">
-                        <img class="opp" src="giphy.gif" alt="">
-                    </div>
-                </div>
-            </div>
-            <!-- INI PLAYER -->
-            <h1 class="vs">VS</h1>
-            <h2 style="text-align: center; font-size: 20px" class="player"></h2>
+            <div class="choose" style="text-align: center; font-size: 20px; font-family: fantasy"> choose one !</div>
             <div class="row playerOut hide">
                 <div class="col-md-offset-4 col-md-4">
                     <div class="thumbnail">
@@ -49,32 +39,33 @@
             </div>
             <div class="row playerIn">
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <div class="thumbnail gambar1">
+                    <div class="thumbnail gambar1 pilihanPlayer" name='batu'>
                         <img src="batu player.jpg" alt="">
                     </div>
-                    <div class="buttons">
-                        <button class="pilihanPlayer btn red" type="text" name="batu"> Rock </button>
-                    </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <div class="thumbnail gambar1">
+                    <div class="thumbnail gambar1 pilihanPlayer" name='gunting'>
                         <img src="gunting player.jpg" alt="">
                     </div>
-                    <div class="buttons">
-                        <button class=" pilihanPlayer btn red" type="text" name="gunting"> Scissor </button>
-                    </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <div class="thumbnail gambar1">
+                    <div class="thumbnail gambar1 pilihanPlayer" name='kertas'>
                         <img src="kertas player.jpg" alt="">
                     </div>
-                    <div class="buttons">
-                        <button class="pilihanPlayer btn red" type="text" name="kertas"> Paper </button>
+                </div>
+            </div>
+            <h2 style="text-align: center; font-size: 20px; margin-top: 0; font-family: cursive;" class="player"></h2>
+            <h1 class="vs">VS</h1>
+            <h2 style="text-align: center; font-size: 20px; font-family: cursive;"> YOUR OPPONENT </h2>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4">
+                    <div class="thumbnail">
+                        <img class="opp" src="giphy.gif" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -90,8 +81,9 @@
                 $('.game').removeClass('hide')
             }
             else {
-                $('.akhir').removeClass('hide')
-                $('.result').text('you must fill name')
+                // $('.akhir').removeClass('hide')
+                // $('.result').text('you must fill name')
+                alert('you must fill name')
             }
         }
         //   AMBIL PILIHAN
@@ -118,6 +110,7 @@
             $('.playerOut1').attr('src', player1 + ' ' + 'player.jpg')
             $('.playerOut').removeClass('hide')
             $('.playerIn').addClass('hide')
+            $('.choose').addClass('hide')
             //KELUARIN HASIL
             if (comp === player1) {
                 $('.akhir').removeClass('hide')

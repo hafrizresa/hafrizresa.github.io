@@ -2,660 +2,160 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="icons8-medium-50.png" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MOZIKA</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Josefin+Sans|Merriweather+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
 
 <body>
-    <!-- INI LOGIN PAGE -->
-    <div class="very-first ">
-        <video id="login-page" src="rock.mp4" loop muted autoplay></video>
-        <div id="login-box">
-            <img id="formWlcm" src="welcome.png" alt="">
-            <!-- <h1 id="formWlcm">Welcome</h1> -->
+    <div class="container">
+        <!-- ini ambil nama -->
+        <div id="login-box" class="">
+            <h1 style="text-align: center">ROSHAMBO</h1>
             <form action="">
                 <div class="form-group frmawal">
-                    <label style="font-family: 'Josefin Sans', sans-serif ; font-weight: 1000px; font-size: 20px" for="Guest">Guest Book</label>
+                    <label style="font-family: 'Josefin Sans', sans-serif ; font-weight: 1000px; font-size: 20px" for="Guest">Please Enter Your Name</label>
                     <input id="Guest" type="text" name="nama" class="form-control" placeholder="Enter your name here" required>
                     <br>
                 </div>
             </form>
-            <button id="submitBtn" type="submit" class="btn button-primary btn-block">Submit</button>
+            <button id="submitBtn" onclick="ambilNama()" type="submit" class="btn button-primary btn-block">Submit</button>
         </div>
+        <!-- START GAME -->
+        <div class="game hide">
+            <div class="akhir hide" style="text-align: center">
+                <h1 class="result"></h1>
+            </div>
+            <h2 style="text-align: center"> OPPONENT </h2>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4">
+                    <div class="thumbnail">
+                        <img class="opp" src="giphy.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- INI PLAYER -->
+            <h1 style="text-align: center; padding-bottom: 20px">VS</h1>
+
+            <div class="row playerOut hide">
+                <div class="col-md-offset-4 col-md-4">
+                    <div class="thumbnail">
+                        <img class="playerOut1" src="giphy.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row playerIn">
+                <div class="col-md-4">
+                    <div class="thumbnail gambar1">
+                        <img src="batu player.jpg" alt="">
+                    </div>
+                    <div class="buttons">
+                        <button class="pilihanPlayer btn red" type="text" name="batu"> Rock </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail gambar1">
+                        <img src="gunting player.jpg" alt="">
+                    </div>
+                    <div class="buttons">
+                        <button class=" pilihanPlayer btn red" type="text" name="gunting"> Scissor </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail gambar1">
+                        <img src="kertas player.jpg" alt="">
+                    </div>
+                    <div class="buttons">
+                        <button class="pilihanPlayer btn red" type="text" name="kertas"> Paper </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 style="text-align: center" class="player"></h2>
     </div>
-    <!-- INI SECTION HEADER  -->
-    <div class="main hide" id="main12">
-        <div id="bg">
-            <div id="bg2">
-                <div class="page-header" id="header">
-                </div>
-
-                <nav class="navbar navbar-default navbar-fixed-top navbar1">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#main12">
-                            <img alt="Brand" src="welcome.png" style="width: 120px; margin-top: -10px;">
-                        </a>
-                    </div>
-                    <ul class="nav nav-pills pull-right nav-style">
-                        <li role="presentation" class="active">
-                            <a href="#abut" class="list1">About</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#ipen" class="list1">Event</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#kontak" class="list1">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="container-fluid navtopo">
-                    <div class="row">
-                        <div class="col-md-12 wlcmname">
-                            <h1>ALL ABOUT MUSIC.</h1>
-                            <h3 id="output-login"> Good Morning Hafriz</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- INI SECTION ABOUT  -->
-        <div class="container-fluid about-style" id="abut">
-            <div class="row">
-                <div class="col-md-6" style="height: 500px">
-                    <h4 class="about-content">
-                        <strong>Pop Genre</strong>
-                    </h4>
-                    <p class="about-content">Pop music is a genre of popular music that originated in its modern form in the United States and United
-                        Kingdom during the mid-1950s.The terms "popular music" and "pop music" are often used interchangeably,
-                        although the former describes all music that is popular and includes many different styles. "Pop"
-                        and "rock" were roughly synonymous terms until the late 1960s, when they became increasingly differentiated
-                        from each other. Although much of the music that appears on record charts is seen as pop music, the
-                        genre is distinguished from chart music. Pop music is eclectic, and often borrows elements from other
-                        styles such as urban, dance, rock, Latin, and country; nonetheless, there are core elements that
-                        define pop music. Identifying factors include generally short to medium-length songs written in a
-                        basic format (often the verse-chorus structure), as well as common use of repeated choruses, melodic
-                        tunes, and hooks.</p>
-                </div>
-                <div class="col-md-6">
-                    <div id="bg-pop">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="bg-rock">
-                    </div>
-                </div>
-                <div class="col-md-6" style="height: 500px">
-                    <h4 class="about-content">
-                        <strong>Rock Genre</strong>
-                    </h4>
-                    <p class="about-content">
-                        Rock music is a broad genre of popular music that originated as "rock and roll" in the United States in the early 1950s,
-                        and developed into a range of different styles in the 1960s and later, particularly in the United
-                        Kingdom and in the United States. It has its roots in 1940s and 1950s rock and roll, a style which
-                        drew heavily on the African-American genres of blues and rhythm and blues, and from country music.
-                        Rock music also drew strongly on a number of other genres such as electric blues and folk, and incorporated
-                        influences from jazz, classical and other musical styles. Musically, rock has centered on the electric
-                        guitar, usually as part of a rock group with electric bass, drums, and one or more singers. Typically,
-                        rock is song-based music usually with a 4/4 time signature using a verse–chorus form, but the genre
-                        has become extremely diverse. Like pop music, lyrics often stress romantic love but also address
-                        a wide variety of other themes that are frequently social or political.
-                    </p>
-                </div>
-                <div class="col-md-6" style="height: 500px">
-                    <h4 class="about-content">
-                        <strong>Hip-Hop Genre</strong>
-                    </h4>
-                    <p class="about-content">hip hop music, also called hip-hop or rap music, is a music genre developed in the United States by inner-city
-                        African Americans in the 1970s which consists of a stylized rhythmic music that commonly accompanies
-                        rapping, a rhythmic and rhyming speech that is chanted. It developed as part of hip hop culture,
-                        a subculture defined by four key stylistic elements: MCing/rapping, DJing/scratching with turntables,
-                        break dancing, and graffiti writing. Other elements include sampling beats or bass lines from records
-                        (or synthesized beats and sounds), and rhythmic beatboxing. While often used to refer solely to rapping,
-                        "hip hop" more properly denotes the practice of the entire subculture.[13][14] The term hip hop music
-                        is sometimes used synonymously with the term rap music, though rapping is not a required component
-                        of hip hop music; the genre may also incorporate other elements of hip hop culture, including DJing,
-                        turntablism, scratching, beatboxing, and instrumental tracks.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <div id="bg-rnb">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- SECTION EVENT -->
-        <div class="event-title" id="ipen">
-            <h3>
-                <strong>Upcoming Event</strong>
-            </h3>
-            <p> Dont miss the event, find your vibes !!!
-            </p>
-        </div>
-        <div class="container-fluid event-style">
-            <div class="row">
-                <div class="col-md-4 img-hover" style="padding: 0; margin: 0">
-                    <img class="img-responsive img-event" src="ISMAYA-15.jpg" alt="">
-                    <div class="to-hover">
-                        <h3>
-                            <strong>ISMAYA-15</strong>
-                        </h3>
-                        <p>9th November 2018
-                            <br> Istora Senayan Jakarta</p>
-                        <a href="http://www.whatsnewjakarta.com/events/ismaya15-15-year-celebration-festival/" target="blank" class="btn">Details</a>
-                    </div>
-                </div>
-                <div class="col-md-4 img-hover" style="padding: 0; margin: 0">
-                    <img class="img-responsive img-event" src="2.jpg" alt="">
-                    <div class="to-hover">
-                        <h3>
-                            <strong>Kygo</strong>
-                        </h3>
-                        <p>November 2nd, 2018
-                            <br> Hall C3 JIExpo Kemayoyan Jakarta</p>
-                        <a href="http://www.whatsnewjakarta.com/events/kygo-jakarta-2018/" target="blank" class="btn">Details</a>
-                    </div>
-                </div>
-                <div class="col-md-4 img-hover" style="padding: 0; margin: 0">
-                    <img class="img-responsive img-event" src="3.jpg" alt="">
-                    <div class="to-hover">
-                        <h3>
-                            <strong>Tuesday Night with Bubugiri</strong>
-                        </h3>
-                        <p>From 9pm onwards
-                            <br> Goodrich Suites 8th floor</p>
-                        <a href="http://www.whatsnewjakarta.com/events/tuesday-night-with-bubugiri-at-the-roosevelt/" target="blank" class="btn">Details</a>
-                    </div>
-                </div>
-                <div class="col-md-4 img-hover" style="padding: 0; margin: 0">
-                    <img class="img-responsive img-event" src="4.jpg" alt="">
-                    <div class="to-hover">
-                        <h3>
-                            <strong>Sunday Night with Diaa</strong>
-                        </h3>
-                        <p>From 9pm onwards
-                            <br> Goodrich Suites 8th floor</p>
-                        <a href="http://www.whatsnewjakarta.com/events/sunday-night-with-diaa-at-the-roosevelt/" target="blank" class="btn">Details</a>
-                    </div>
-                </div>
-                <div class="col-md-4 img-hover" style="padding: 0; margin: 0">
-                    <img class="img-responsive img-event" src="5.jpg" alt="">
-                    <div class="to-hover">
-                        <h3>
-                            <strong> Guns N’ Roses </strong>
-                        </h3>
-                        <p>8 November 2018
-                            <br> Jakarta</p>
-                        <a href="http://www.whatsnewjakarta.com/events/guns-n-roses-rocks-jakarta-november-2018/" target="blank" class="btn">Details</a>
-                    </div>
-                </div>
-                <div class="col-md-4 img-hover" style="padding: 0; margin: 0">
-                    <img class="img-responsive img-event" src="6.jpg" alt="">
-                    <div class="to-hover">
-                        <h3>
-                            <strong>Prambanan Jazz 2018</strong>
-                        </h3>
-                        <p>Sunday, August 17 – 19 2018
-                            <br> Taman Wisata Prambanan Temple – Yogyakarta</p>
-                        <a href="http://www.whatsnewjakarta.com/events/prambanan-jazz-2018/" target="blank" class="btn">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SECTION GAME -->
-        <div class="container-fluid question">
-            <div class="row">
-                <div class="col-md-6 game2">
-                    <h2 style="    position: absolute;left:200px;top: 99px;font-family: 'Merriweather Sans', sans-serif;font-weight: bolder;">What is your genre ?</h2>
-                </div>
-                <div class="col-md-6 game1">
-                    <div class="1phase">
-                        <div class="portfolio-experiment rock">
-                            <a>
-                                <span class="text">GunsNRoses</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment pop">
-                            <a>
-                                <span class="text">Coldplay</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment rnb">
-                            <a>
-                                <span class="text">Eminem</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="2phase hide">
-                        <div class="portfolio-experiment rock2">
-                            <a>
-                                <span class="text">Metalica</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment pop2">
-                            <a>
-                                <span class="text">Maroon5</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment rnb2">
-                            <a>
-                                <span class="text">Tupac</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="3phase hide">
-                        <div class="portfolio-experiment rock3">
-                            <a>
-                                <span class="text">Aerosmith</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment pop3">
-                            <a>
-                                <span class="text">Taylor Swift</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment rnb3">
-                            <a>
-                                <span class="text">Lil Wayne</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="4phase hide">
-                        <div class="portfolio-experiment rock4">
-                            <a>
-                                <span class="text">Blink182</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment pop4">
-                            <a>
-                                <span class="text">Elvis</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment rnb4">
-                            <a>
-                                <span class="text">Whiz Khalifa</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="5phase hide">
-                        <div class="portfolio-experiment rock5">
-                            <a>
-                                <span class="text">Iron Maiden</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment pop5">
-                            <a>
-                                <span class="text">Michael Jackson</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="portfolio-experiment rnb5">
-                            <a>
-                                <span class="text">Drake</span>
-                                <span class="line -right"></span>
-                                <span class="line -top"></span>
-                                <span class="line -left"></span>
-                                <span class="line -bottom"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <h2 id="game-output" style="text-align: center"></h2>
-                    <img style="position: relative; width: 317px; left: 175px;" class="game-outputrock hide" src="rock1.gif" alt="">
-                    <img style="position: relative; width: 286px; left: 191px;" class="game-outputpop hide" src="pop.gif" alt="">
-                    <img style="position: relative; width: 317px; left: 175px;" class="game-outputrnb hide" src="rap.gif" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- INI VIDEO   -->
-        <div class="container-fluid output-div">
-           
-            <p class="output-quotes">
-                <span id="quotes-style"> A lot of truth is said in jest</span>
-                <br>
-                <span id="quotes-style1">
-                    <i>Slim Shady
-                        <i>
-                </span>
-            </p>
-            <div class="video-overlay">
-                <div class="video-quotes">
-                    <video class="video-bg" src="show.mp4" preload="auto" autoplay loop muted></video>
-                </div>
-            </div>
-        </div>
-
-        <!-- INI SECTION FOOTER -->
-        <div class="container-fluid footerr" id="kontak">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                    <h2 style="color: white">Contact</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
-                    <form action="https://formspree.io/hafrizresa@gmail.com" method="POST" id="contact-form" class="form">
-                        <div class="form-group">
-                            <label class="form-label" for="name">Your Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="email">Your Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" tabindex="2" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="subject">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="message">Message</label>
-                            <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Message..." tabindex="4" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-start-order" value="send">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
+
     <script>
-        var isianinput = ''
-        var fungsiawal = function () {
-            var d = new Date;
-            isianinput = $('#Guest').val();
-            if (isianinput !== '') {
-                $('.very-first').fadeOut(1000);
-                $('.main').removeClass('hide');
-            }
-            else { alert('You must fill name') }
-
-            // INI BUAT WELCOME NAME
-            if (d.getHours() > 18) {
-                $('#output-login').html('Good Evening ' + isianinput)
-            }
-            else if (d.getHours() > 6 && d.getHours() < 12) {
-                $('#output-login').html('Good Morning ' + isianinput)
-            }
-            else { $('#output-login').html('Good Afternoon ' + isianinput) }
-        }
-
-        
-        $('#submitBtn').click(function(){
-            fungsiawal();
-        })
-
-        $('#guest').keyup(function(event){
-            if (event.keyCode == 13){
-                fungsiawal()
-            }
-        })
-
-        // INI BUAT QUOTES
-        var quotes = [
-            '<span id="quotes-style">You will never change what has been and gone</span> <br> <span id="quotes-style1"><i>Oasis<i></span>',
-            '<span id="quotes-style">A lot of truth is said in jest</span> <br>  <span id="quotes-style1"><i>Slim Shady<i></span>',
-            '<span id="quotes-style">When you fight, dont fight fair, cuz you will never win</span> <br><span id="quotes-style1"> <i>Scott Mescudi<i></span>',
-        ]
-
-
-        function quotes1() {
-            var random = Math.floor(Math.random() * quotes.length)
-            $('.output-quotes').html(quotes[random]);
-        }
-
-        setInterval(function () {
-            quotes1()
-        }, 3000);
-
-        // INI BUAT PERTANYAAN 
-        var pop = []
-        var rock = []
-        var rnb = []
-        $('.rock').click(function () {
-            rock.push('A');
-            $('.1phase').addClass('hide');
-            $('.2phase').removeClass('hide')
-        })
-        $('.pop').click(function () {
-            pop.push('A');
-            $('.1phase').addClass('hide');
-            $('.2phase').removeClass('hide')
-        })
-        $('.rnb').click(function () {
-            rnb.push('A');
-            $('.1phase').addClass('hide');
-            $('.2phase').removeClass('hide')
-        })
-        // PHASE 2
-        $('.rock2').click(function () {
-            rock.push('A');
-            $('.2phase').addClass('hide');
-            $('.3phase').removeClass('hide')
-        })
-        $('.pop2').click(function () {
-            pop.push('A');
-            $('.2phase').addClass('hide');
-            $('.3phase').removeClass('hide')
-        })
-        $('.rnb2').click(function () {
-            rnb.push('A');
-            $('.2phase').addClass('hide');
-            $('.3phase').removeClass('hide')
-        })
-        // PHASE 3
-        $('.rock3').click(function () {
-            rock.push('A');
-            $('.3phase').addClass('hide');
-            $('.4phase').removeClass('hide')
-        })
-        $('.pop3').click(function () {
-            pop.push('A');
-            $('.3phase').addClass('hide');
-            $('.4phase').removeClass('hide')
-        })
-        $('.rnb3').click(function () {
-            rnb.push('A');
-            $('.3phase').addClass('hide');
-            $('.4phase').removeClass('hide')
-        })
-        // PHASE 4
-        $('.rock4').click(function () {
-            rock.push('A');
-            $('.4phase').addClass('hide');
-            $('.5phase').removeClass('hide')
-        })
-        $('.pop4').click(function () {
-            pop.push('A');
-            $('.4phase').addClass('hide');
-            $('.5phase').removeClass('hide')
-        })
-        $('.rnb4').click(function () {
-            rnb.push('A');
-            $('.4phase').addClass('hide');
-            $('.5phase').removeClass('hide')
-        })
-        // PHASE 5
-        $('.rock5').click(function () {
-            rock.push('A');
-            $('.5phase').addClass('hide');
-            if (rock.length > pop.length && rock.length > rnb.length) {
-                $('#game-output').html('You are  ROCKSTAR !!');
-                $('.game-outputrock').removeClass('hide');
-            }
-            else if (pop.length > rock.length && pop.length > rnb.length) {
-                $('#game-output').html('You are POPSTAR!!');
-                $('.game-outputpop').removeClass('hide');
-            }
-            else if (rnb.length > rock.length && rnb.length > pop.length) {
-                $('#game-output').html('You are DOPE !!');
-                $('.game-outputrnb').removeClass('hide');
+        function ambilNama() {
+            var nama = $('#Guest').val()
+            if (nama !== '') {
+                $('.player').append(' ' + nama.toUpperCase())
+                $('#login-box').addClass('hide')
+                $('.game').removeClass('hide')
             }
             else {
-                alert('try again more specific');
-                $('.1phase').removeClass('hide')
-            }
-        })
-        $('.pop5').click(function () {
-            pop.push('A');
-            $('.5phase').addClass('hide');
-            if (rock.length > pop.length && rock.length > rnb.length) {
-                $('#game-output').html('You are  ROCKSTAR !!');
-                $('.game-outputrock').removeClass('hide');
-            }
-            else if (pop.length > rock.length && pop.length > rnb.length) {
-                $('#game-output').html('You are POPSTAR!!');
-                $('.game-outputpop').removeClass('hide');
-            }
-            else if (rnb.length > rock.length && rnb.length > pop.length) {
-                $('#game-output').html('You are DOPE !!');
-                $('.game-outputrnb').removeClass('hide');
-            }
-            else {
-                alert('try again more specific');
-                $('.1phase').removeClass('hide')
-            }
-        })
-        $('.rnb5').click(function () {
-            rnb.push('A');
-            $('.5phase').addClass('hide');
-            if (rock.length > pop.length && rock.length > rnb.length) {
-                $('#game-output').html('You are  ROCKSTAR !!');
-                $('.game-outputrock').removeClass('hide');
-            }
-            else if (pop.length > rock.length && pop.length > rnb.length) {
-                $('#game-output').html('You are POPSTAR!!');
-                $('.game-outputpop').removeClass('hide');
-            }
-            else if (rnb.length > rock.length && rnb.length > pop.length) {
-                $('#game-output').html('You are DOPE !!');
-                $('.game-outputrnb').removeClass('hide');
-            }
-            else {
-                alert('try again more specific');
-                $('.1phase').removeClass('hide')
-            }
-        })
-
-        // SMOOTH SCROLL
-
-        $(document).ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-
-        //   BUAT NAVBAR
-        window.onscroll = function () { buatscroll() };
-
-        function buatscroll() {
-            if ($('.navbar').scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                $('.navbar').addClass('.navbar2').removeClass('navbar1')
-            }
-            else {
-                $('.navbar').addClass('navbar1').removeClass('navbar2')
+                $('.akhir').removeClass('hide')
+                $('.result').text('you must fill name')
             }
         }
+        //   AMBIL PILIHAN
+        var comp = ''
+        var player1 = ''
+        $('.pilihanPlayer').click(function () {
+            player1 = $(this).attr('name')
+            // ngacak comp
+            var random = Math.ceil(Math.random() * 3)
+            if (random == 1) {
+                $('.opp').attr('src', 'batu.jpg')
+                comp = 'batu'
+            }
+            else if (random == 2) {
+                $('.opp').attr('src', 'gunting.jpg')
+                comp = 'gunting'
+            }
+            else {
+                $('.opp').attr('src', 'kertas.jpg')
+                comp = 'kertas'
+            }
 
+            // keluarin output player
+            $('.playerOut1').attr('src', player1 + ' ' + 'player.jpg')
+            $('.playerOut').removeClass('hide')
+            $('.playerIn').addClass('hide')
+            //KELUARIN HASIL
+            if (comp === player1) {
+                $('.akhir').removeClass('hide')
+                $('.result').text('Seri');
+                // selector = prompt('mau main lagi ? Y/N')
+            }
+            else if ((player1 === 'batu') && (comp === 'gunting')) {
+                $('.akhir').removeClass('hide')
+                $('.result').text('kamu menang');
+                //  selector = prompt('mau main lagi ? Y/N')
+            }
+            else if ((player1 === 'gunting') && (comp === 'kertas')) {
+                $('.akhir').removeClass('hide')
+                $('.result').text('kamu menang');
+                // selector = prompt('mau main lagi ? Y/N')
+            }
+            else if ((player1 === 'kertas') && (comp === 'batu')) {
+                $('.akhir').removeClass('hide')
+                $('.result').text('kamu menang');
+                // selector = prompt('mau main lagi ? Y/N')
+            }
+            else if ((player1 === 'batu') && (comp === 'kertas')) {
+                $('.akhir').removeClass('hide')
+                $('.result').text('kamu kalah');
+                // selector = prompt('mau main lagi ? Y/N')
+            }
+            else if ((player1 === 'gunting') && (comp === 'batu')) {
+                $('.akhir').removeClass('hide')
+                $('.result').text('kamu kalah');
+                // selector = prompt('mau main lagi ? Y/N') 
+            }
+            else if ((player1 === 'kertas') && (comp === 'gunting')) {
+                $('.akhir').removeClass('hide')
+                $('.result').text('kamu kalah');
+            }
+            // selector = prompt('mau main lagi ? Y/N') }
+        })
 
     </script>
 </body>

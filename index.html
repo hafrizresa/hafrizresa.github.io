@@ -15,10 +15,9 @@
     <div class="container">
         <!-- ini ambil nama -->
         <div id="login-box" class="">
-            <h1 style="text-align: center">ROSHAMBO</h1>
+            <h1 class="roshambo">ROSHAMBO</h1>
             <form action="">
                 <div class="form-group frmawal">
-                    <label style="font-family: 'Josefin Sans', sans-serif ; font-weight: 1000px; font-size: 20px" for="Guest">Please Enter Your Name</label>
                     <input id="Guest" type="text" name="nama" class="form-control" placeholder="Enter your name here" required>
                     <br>
                 </div>
@@ -30,7 +29,7 @@
             <div class="akhir hide" style="text-align: center">
                 <h1 class="result"></h1>
             </div>
-            <h2 style="text-align: center"> OPPONENT </h2>
+            <h2 style="text-align: center; font-size: 20px"> YOUR OPPONENT </h2>
             <div class="row">
                 <div class="col-md-offset-4 col-md-4">
                     <div class="thumbnail">
@@ -39,8 +38,8 @@
                 </div>
             </div>
             <!-- INI PLAYER -->
-            <h1 style="text-align: center; padding-bottom: 20px">VS</h1>
-
+            <h1 class="vs">VS</h1>
+            <h2 style="text-align: center; font-size: 20px" class="player"></h2>
             <div class="row playerOut hide">
                 <div class="col-md-offset-4 col-md-4">
                     <div class="thumbnail">
@@ -75,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <h2 style="text-align: center" class="player"></h2>
+        
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -122,37 +121,37 @@
             //KELUARIN HASIL
             if (comp === player1) {
                 $('.akhir').removeClass('hide')
-                $('.result').text('Seri');
+                $('.result').text('DRAW');
                 // selector = prompt('mau main lagi ? Y/N')
             }
             else if ((player1 === 'batu') && (comp === 'gunting')) {
                 $('.akhir').removeClass('hide')
-                $('.result').text('kamu menang');
+                $('.result').text('YOU WIN !!!');
                 //  selector = prompt('mau main lagi ? Y/N')
             }
             else if ((player1 === 'gunting') && (comp === 'kertas')) {
                 $('.akhir').removeClass('hide')
-                $('.result').text('kamu menang');
+                $('.result').text('YOU WIN !!!');
                 // selector = prompt('mau main lagi ? Y/N')
             }
             else if ((player1 === 'kertas') && (comp === 'batu')) {
                 $('.akhir').removeClass('hide')
-                $('.result').text('kamu menang');
+                $('.result').text('YOU WIN !!!');
                 // selector = prompt('mau main lagi ? Y/N')
             }
             else if ((player1 === 'batu') && (comp === 'kertas')) {
                 $('.akhir').removeClass('hide')
-                $('.result').text('kamu kalah');
+                $('.result').text('YOU LOSE :(');
                 // selector = prompt('mau main lagi ? Y/N')
             }
             else if ((player1 === 'gunting') && (comp === 'batu')) {
                 $('.akhir').removeClass('hide')
-                $('.result').text('kamu kalah');
+                $('.result').text('YOU LOSE :(');
                 // selector = prompt('mau main lagi ? Y/N') 
             }
             else if ((player1 === 'kertas') && (comp === 'gunting')) {
                 $('.akhir').removeClass('hide')
-                $('.result').text('kamu kalah');
+                $('.result').text('YOU LOSE :(');
             }
             // selector = prompt('mau main lagi ? Y/N') }
         })

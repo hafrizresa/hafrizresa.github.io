@@ -1,4 +1,39 @@
 
+/* FONTS */
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bangers Regular'), local('Bangers-Regular'), url(https://fonts.gstatic.com/s/bangers/v10/FeVQS0BTqb0h60ACH55Q2A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Luckiest Guy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Luckiest Guy Regular'), local('LuckiestGuy-Regular'), url(https://fonts.gstatic.com/s/luckiestguy/v8/_gP_1RrxsjcxVyin9l9n_j2hTd52.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* END OF FONTS */
+
+
+.result{
+  font-family: 'Bangers';
+  font-size: 80px
+}
+.roshambo{
+  text-align: center;
+  font-family: 'Bangers';
+  padding-bottom: 20px
+}
+.vs {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: 'Luckiest Guy';
+  font-size: 80px
+}
+
 .buttons1{
   position: relative;
   left: -30%;
@@ -29,7 +64,7 @@ img{
     transform: translateX(-50%);
     width: 350px;
     margin: 0 auto;
-    background: rgba(48, 46, 45, 0.719);
+    background:cadetblue;
     min-height: 250px;
     padding: 20px;
        
@@ -80,10 +115,10 @@ img{
     box-shadow: 0px 1px 0px 0px;
   }
   .red {
-    background-color: #e74c3c;
-    box-shadow: 0px 5px 0px 0px #CE3323;
+    background-color: #ff8300f2;
+    box-shadow: 0px 5px 0px 0px rgb(3, 3, 0);
   }
   
   .red:hover {
-    background-color: #FF6656;
+    background-color: rgb(230, 148, 72);
   }  
